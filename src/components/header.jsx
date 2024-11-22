@@ -28,7 +28,8 @@ export const Header = () => {
 
   const linkStyle =
     'text-xl font-bold text-[#14142B] leading-6 hover:font-extrabold hover:text-[#4A3AFF] hover:cursor-pointer';
-  const activeLinkStyle = 'text-xl font-extrabold text-[#4A3AFF] leading-6';
+  const activeLinkStyle =
+    'text-xl mobile:text-m font-extrabold text-[#4A3AFF] leading-6';
 
   const onClickPoint = () => {
     setIsPointModalOpen(true);
@@ -56,11 +57,11 @@ export const Header = () => {
     <div className="w-full flex flex-row items-center justify-between bg-white drop-shadow h-[80px] px-[68px] z-[999]">
       <Link
         to="/"
-        className="text-[26px] font-extrabold text-[#14142B] leading-9 tracking-tighter"
+        className="text-[26px] mobile:text-[22px] font-extrabold text-[#14142B] leading-9 tracking-tighter"
       >
         멋쟁이 사주처럼
       </Link>
-      <div className="flex flex-row items-center gap-[50px]">
+      <div className="flex flex-row items-center gap-[50px] mobile:gap-[10px]">
         <Link
           to="/saju"
           className={
