@@ -1,16 +1,31 @@
 import { Button } from 'components/button';
 import { SectionLayout } from './section-layout';
+import { useRef } from 'react';
 
 export const MainSection = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      /** 구체적인 스크롤 콜백 함수가 들어갈 예정 */
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
   return (
-    <SectionLayout>
+    <SectionLayout 
+      outerLayerClassName={'h-[500vh] flex items-start'}
+      innerLayerClassName={`sticky top-[80px] h-[calc(100vh-80px)]`} 
+      innerLayerRef={sectionRef}>
       <div className="flex flex-col w-full gap-8 items-start">
         <h1 className="text-[64px] leading-normal whitespace-pre-wrap text-left nanum-extra-bold text-black dark:text-white">
-          <span>멋쟁이</span> <s className="text-gray-500">사자</s>
+          <span>멋쟁이</span>{' '}
+          <s className="text-gray-500 dark:text-gray-400">사자</s>
           {'\n'}
           <span>사주처럼</span>
         </h1>
-        <p className="text-lg text-left">
+        <p className="text-lg text-left dark:text-white">
           오늘의 사주 운세를 확인하고, 친구에게 공유하자!
         </p>
         <a href="/saju">
