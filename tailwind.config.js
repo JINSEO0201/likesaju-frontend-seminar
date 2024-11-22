@@ -11,9 +11,6 @@ module.exports = {
     './**/@material-tailwind/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    screens: {
-      mobile: { max: '1024px'},
-    },
     extend: {
       colors: {
         primary: '#4A3AFF',
