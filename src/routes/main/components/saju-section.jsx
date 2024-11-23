@@ -33,7 +33,7 @@ export const SajuSection = () => {
         <div className="w-full h-full flex flex-col gap-[80px]">
           <div className="w-full flex mobile:flex-col justify-between items-center mobile:gap-4">
             <div className="space-y-6 mobile:space-y-2">
-              <h3 className="text-left mobile:text-center text-4xl mobile:text-2xl nanum-extra-bold text-neutral-800 dark:text-white">
+              <h3 className="text-left mobile:text-center text-4xl mobile:text-xl nanum-extra-bold text-neutral-800 dark:text-white">
                 AI가 알려주는 사주
               </h3>
               <p className="text-xl mobile:text-sm font-semibold text-neutral-800 dark:text-white">
@@ -42,7 +42,7 @@ export const SajuSection = () => {
             </div>
             <a href="/saju">
               <Button
-                  className="w-[250px] h-[50px] mobile:w-[180px] mobile:h-[40px] mobile:text-sm"
+                  className="w-[250px] h-[50px] mobile:w-[180px] mobile:h-[40px] mobile:text-xs"
                   isRounded={true}
               >
                 내 사주 보러가기
@@ -53,7 +53,7 @@ export const SajuSection = () => {
             <p className="text-xl mobile:text-base text-neutral-800 font-semibold dark:text-white">
               어떤 내용을 확인할 수 있나요?
             </p>
-            <div className="grid grid-cols-2 mobile:grid-cols-1 gap-[30px] mobile:w-fit">
+            <div className="mobile:text-[20px] grid grid-cols-2 mobile:grid-cols-1 gap-[30px] mobile:w-fit">
               {sajuCardInfo.map((card) => (
                   <SajuCard
                       key={card.title}
@@ -77,10 +77,10 @@ const SajuCard = ({ title, description, img }) => {
           <img src={img} alt="Saju Card" className="object-contain" />
         </div>
         <div className="space-y-2 h-fit mobile:w-full">
-          <h4 className="text-left text-xl font-bold text-neutral-800">
+          <h4 className="mobile:text-sm text-left text-xl font-bold text-neutral-800">
             {title}
           </h4>
-          <p className="text-left text-base font-normal text-neutral-800">
+          <p className="mobile:text-sm text-left text-base font-normal text-neutral-800">
             {description}
           </p>
         </div>

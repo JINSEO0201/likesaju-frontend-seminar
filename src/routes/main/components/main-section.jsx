@@ -80,12 +80,11 @@ export const MainSection = () => {
     const factor2 = Math.min(scrollY / (maxScroll / 2), 1);
     const viewportYMiddle = window.innerHeight / 2;
 
-    // textRef 애니메이션 추가
     if (textRef.current) {
       gsap.to(textRef.current, {
-        x: -200 * (1 - factor2), // 좌측에서 등장
-        opacity: factor2, // 투명도 증가
-        duration: 0.5, // 애니메이션 지속 시간
+        x: -200 * (1 - factor2), 
+        opacity: factor2, 
+        duration: 0.8,
       });
     }
 

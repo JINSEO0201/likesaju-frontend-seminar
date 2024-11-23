@@ -27,9 +27,9 @@ export const Header = () => {
   }, []);
 
   const linkStyle =
-    'text-xl font-bold text-[#14142B] leading-6 hover:font-extrabold hover:text-[#4A3AFF] hover:cursor-pointer';
+    'mobile:text-[16px] text-xl font-bold text-[#14142B] leading-6 hover:font-extrabold hover:text-[#4A3AFF] hover:cursor-pointer';
   const activeLinkStyle =
-    'text-xl mobile:text-m font-extrabold text-[#4A3AFF] leading-6';
+    'mobile:text-[16px] text-xl mobile:text-sm font-extrabold text-[#4A3AFF] leading-6';
 
   const onClickPoint = () => {
     setIsPointModalOpen(true);
@@ -57,7 +57,7 @@ export const Header = () => {
     <div className="w-full flex flex-row items-center justify-between bg-white drop-shadow h-[80px] px-[68px] z-[999]">
       <Link
         to="/"
-        className="text-[26px] mobile:text-[22px] font-extrabold text-[#14142B] leading-9 tracking-tighter"
+        className="text-[26px] mobile:text-[16px] font-extrabold text-[#14142B] leading-9 tracking-tighter"
       >
         멋쟁이 사주처럼
       </Link>
@@ -84,7 +84,7 @@ export const Header = () => {
             onMouseOver={() => setShowProfile(true)}
             onMouseLeave={() => setShowProfile(false)}
           >
-            <span className="text-xl font-bold text-[#14142B] leading-6 hover:font-extrabold hover:text-[#4A3AFF] hover:cursor-pointer">
+            <span className="mobile:text-[16px] text-xl font-bold text-[#14142B] leading-6 hover:font-extrabold hover:text-[#4A3AFF] hover:cursor-pointer">
               프로필
             </span>
             {showProfile && (
